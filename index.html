@@ -100,7 +100,7 @@ background-size:cover;
 
 
 
-(align:&quot;=&gt;&lt;=&quot;)[[It&#39;s time to pack for university.-&gt;Packing]]</tw-passagedata><tw-passagedata pid="2" name="Packing" tags="packing" position="1028,172" size="100,100">(enchant:?passage,(text-colour:black)) (enchant:?page,(background:white))
+(align:&quot;=&gt;&lt;=&quot;)[[It&#39;s time to pack for university.-&gt;Packing]]</tw-passagedata><tw-passagedata pid="2" name="Packing" tags="packing" position="1029.6666666666667,172" size="100,100">(enchant:?passage,(text-colour:black)) (enchant:?page,(background:white))
 //(align:&quot;=&gt;&lt;=&quot;)[$hint]//
 
 {
@@ -267,7 +267,7 @@ Still, it hurts to think about. You know there was more to it than that.]
 (align:&quot;=&gt;&lt;=&quot;)+(box:&quot;=XX=&quot;)[It&#39;s a good thing nintendogs can&#39;t die because you haven&#39;t been taking care of them for years now. Your starter dog was a (cycling-link: bind $breed, &quot;Shiba Inu&quot;, &quot;Chihuahua&quot;, &quot;Beagle&quot;). 
 You wonder how (cycling-link: bind $breed, &quot;he&#39;s&quot;, &quot;she&#39;s&quot;) doing...]
 
-(align:&quot;=&gt;&lt;=&quot;)+(box:&quot;=XX=&quot;)[Your $parent is super allergic to pets with fur. You spent so much time taking care of these dogs. Of course, they never came close to the real thing. 
+(align:&quot;=&gt;&lt;=&quot;)+(box:&quot;=XX=&quot;)[Your $parent is allergic to pets with fur. You spent so much time taking care of these dogs. Of course, they never came close to the real thing. 
 Maybe now that you&#39;re moving out you&#39;ll (cycling-link: bind $pet, &quot;get a real dog.&quot;, &quot;get a cat. They&#39;re way cuter.&quot;)]
 &lt;img src=&quot;https://static.wixstatic.com/media/d601cd_4841b302677c474ab6a5bbbabfe81204~mv2.gif&quot; height=100px draggable=&quot;false&quot;&gt;
 
@@ -313,7 +313,7 @@ You always packed sandwiches, they brought fruit and drinks. After you swam and 
 
 
 (link: &quot;Take them with you&quot;)[(set: $packedShells to 1)(goto: &quot;Packing&quot;)] or (link: &quot;Leave them at home.&quot;)[(set: $packedShells to 0)(goto: &quot;Packing&quot;)]
-</tw-passagedata><tw-passagedata pid="9" name="resolution" tags="res" position="1013,424" size="100,100">{(enchant:?passage,(text-colour:black)) (enchant:?page,(background:white))
+</tw-passagedata><tw-passagedata pid="9" name="resolution" tags="res" position="1013,422.3333333333333" size="100,100">{(enchant:?passage,(text-colour:black)) (enchant:?page,(background:white))
 (if:$candy is &quot;prefer the lemon ones anyways.&quot;)[
 (set: $candy to &quot;lemon&quot;)]
 (else:)[(set: $candy to &quot;strawberry&quot;)]
@@ -336,26 +336,26 @@ You always packed sandwiches, they brought fruit and drinks. After you swam and 
 
 
 
-{(align:&quot;&lt;==&gt;&quot;)+(box:&quot;=XXX=&quot;)[= (if:$packedCandy is 1)[
+{(t8n:&quot;dissolve&quot;)[(align:&quot;&lt;==&gt;&quot;)+(box:&quot;=XXX=&quot;)[= (if:$packedCandy is 1)[
 It&#39;s weird. You and your $sibling have gotten closer since you moved out. You ask them for advice, send them silly updates about your day, and call at least once a week. During exam season, they came by and took you out for ice cream. They brought you $candy candies too. It really helped.]
 
-(else-if:$packedCandy is 0)[It&#39;s been a while since you spoke to your $sibling. You see them post on social media sometimes, but you don&#39;t really have much to say to each other. They&#39;re living their own life and you&#39;re living yours.]}
-{(align:&quot;&lt;==&gt;&quot;)+(box:&quot;=XXX=&quot;)[=(if:$packedShells is 1)[
-You spent your first year making a lot of new friends. You met so many interesting people, and way too many uninteresting people. You miss your friends from home, but everyone is so far apart. It makes it hard to keep in touch. Maybe you&#39;ll check in when you&#39;re back for the summer.
+(else-if:$packedCandy is 0)[It&#39;s been a while since you spoke to your $sibling. You see them post on social media sometimes, but you don&#39;t really have much to say to each other. They&#39;re living their own life and you&#39;re living yours.](stop:)]}
+{(live: 3s)[(t8n:&quot;dissolve&quot;)[(align:&quot;&lt;==&gt;&quot;)+(box:&quot;=XXX=&quot;)[=(if:$packedShells is 1)[
+You lost a few shells in the move. It&#39;s okay though, your favourite ones are still there. $bff You can&#39;t wait to see them again. You wonder what kind of shells you&#39;ll find together this time.
 ]
 (else-if:$packedShells is 0)[
-You spent your first year making a lot of new friends. You met a lot of interesting people, and way too many uninteresting people. You kind of miss your friends from home, but everyone is so far apart. It makes it hard to keep in touch. Maybe you&#39;ll check in when you&#39;re back for the summer.
-]}
-{(align:&quot;&lt;==&gt;&quot;)+(box:&quot;=XXX=&quot;)[=(if:$packedKeys is 1)[
+You spent your first year making new friends. You met so many interesting people, and way too many uninteresting people. You miss your friends from home, but everyone is so far apart. It makes it hard to keep in touch. Maybe you&#39;ll check in when you&#39;re back for the summer.
+]](stop:)]}
+{(live: 6s)[(t8n:&quot;dissolve&quot;)[(align:&quot;&lt;==&gt;&quot;)+(box:&quot;=XXX=&quot;)[=(if:$packedKeys is 1)[
 You&#39;re glad you grabbed your keychain. Your new keys didn&#39;t feel right without them. Your $parent comes by to visit you once a month. It&#39;s a little annoying, but it&#39;s hard to complain when you&#39;re brought home cooked food. You miss being home.
 ]
 (else-if:$packedKeys is 0)[
 You fell in love with living away from home so fast. Your $parent helped you set everything up, and it&#39;s perfect. A space just for you. Almost. You live with roommates, but they&#39;re pretty cool! You got matching keychains together. Feels good to have them around.
-]}
+]](stop:)]}
 
-(link: &quot;Blink.&quot;)[
+(live: 8s)[(t8n:&quot;dissolve&quot;)[(link: &quot;Blink.&quot;)[
 	(go-to: &quot;resolution2&quot;)
-]</tw-passagedata><tw-passagedata pid="10" name="resolution2" tags="res" position="1126,424" size="100,100">{(enchant:?passage,(text-colour:black)) (enchant:?page,(background:white))
+]](stop:)]</tw-passagedata><tw-passagedata pid="10" name="resolution2" tags="res" position="1126,424" size="100,100">{(enchant:?passage,(text-colour:black)) (enchant:?page,(background:white))
 (if:$part is &quot;They probably never noticed it was missing.&quot;)[
 (set: $together to &quot;Your fights are worse than they used to be. You&#39;re trying to be optimistic, though. Who knows, maybe next year it&#39;ll get easier.&quot;)]
 (else:)[(set: $together to &quot;Still, they make you feel loved. They make you feel at home. As hard as it is, it&#39;s all worth it.&quot;)]}
@@ -367,27 +367,27 @@ You fell in love with living away from home so fast. Your $parent helped you set
 
 
 
-{(align:&quot;&lt;==&gt;&quot;)+(box:&quot;=XXX=&quot;)[=(if:$packedDogs is 1)[
+{(t8n:&quot;dissolve&quot;)[(align:&quot;&lt;==&gt;&quot;)+(box:&quot;=XXX=&quot;)[=(if:$packedDogs is 1)[
 You don&#39;t regret bringing your DS with you at all. Some people look at it like it&#39;s a fossil, and you&#39;ll admit it&#39;s way more fun playing with your roommates  on the house Switch, but you love your DS all the same. You can&#39;t find your stylus most days. Your new $newpet probably hid it somewhere. She&#39;s a big troublemaker sometimes. Good thing she&#39;s so adorable.
 ]
 (else-if:$packedDogs is 0)[
 You got a new $newpet! It&#39;s kind of hard to take care of him. You have alternating responsibilities with your roommates. Honestly, you&#39;re not the best about cleaning up after him. He definitely loves you the most. He sleeps in your bed every night and follows you around the house. It&#39;s pretty adorable.
-]}
-{(align:&quot;&lt;==&gt;&quot;)+(box:&quot;=XXX=&quot;)[=(if:$packedSharpener is 1)[
+](stop:)]}
+{(live: 3s)[(t8n:&quot;dissolve&quot;)[(align:&quot;&lt;==&gt;&quot;)+(box:&quot;=XXX=&quot;)[=(if:$packedSharpener is 1)[
 You and your $partner are still together. You don&#39;t go to school together, but you call every night and message whenever you can. You know it&#39;s not easy. $together
 ]
 (else-if:$packedSharpener is 0)[
 You and your $partner broke up before you left. You texted eachother a few times since then. They sent you a message on your birthday and it made you cry. You know it was for the best, but it still hurts. You love who you&#39;ve become on your own. You take yourself out on dates. Plus, having crushes is pretty fun. Actually, there&#39;s someone on your mind right now. You&#39;ll have to start borrowing more stationery.
-]}
-{(align:&quot;&lt;==&gt;&quot;)+(box:&quot;=XXX=&quot;)[=(if:$packedCandy+ $packedShells+ $packedKeys + $packedDogs + $packedSharpener is &gt;3)[
+]](stop:)]}
+{(live: 6s)[(t8n:&quot;dissolve&quot;)[(align:&quot;&lt;==&gt;&quot;)+(box:&quot;=XXX=&quot;)[=(if:$packedCandy+ $packedShells+ $packedKeys + $packedDogs + $packedSharpener is &gt;3)[
 Even though you&#39;re moving forward in life, you&#39;re still who you used to be. You&#39;re proud of that. You&#39;re living your life for yourself, not for anyone else. You&#39;re still finding out what that means, but every day it gets a little easier.
 ]
 (else:)[
-Your first term coming to an end makes you realize how much you&#39;ve changed. Sometimes you look in the mirror and feel totally lost, like you&#39;re looking at a stranger. It&#39;s exciting and terrifying all at once. You can&#39;t imagine how different things will be next year, but you can&#39;t wait to find out.
-]}
-(link: &quot;Blink.&quot;)[
-    (go-to: &quot;Refs&quot;)
-]</tw-passagedata><tw-passagedata pid="11" name="Refs" tags="" position="1243,425" size="100,100">{(enchant:?passage,(text-colour:white))}
+Your first year coming to an end makes you realize how much you&#39;ve changed. Sometimes you look in the mirror and feel totally lost, like you&#39;re looking at a stranger. It&#39;s exciting and terrifying all at once. You can&#39;t imagine how different things will be next year, but you can&#39;t wait to find out.
+]](stop:)]}
+(live: 8s)[(t8n:&quot;dissolve&quot;)[(link: &quot;Blink.&quot;)[
+	(go-to: &quot;Refs&quot;)
+]](stop:)]</tw-passagedata><tw-passagedata pid="11" name="Refs" tags="" position="1243,425" size="100,100">{(enchant:?passage,(text-colour:white))}
 
 
 
@@ -400,7 +400,7 @@ Your first term coming to an end makes you realize how much you&#39;ve changed. 
 
 (live: 2s)[(t8n:&quot;dissolve&quot;)[All stock images found on depositphotos.com]
 (stop:)]
-(live: 4s)[(t8n:&quot;dissolve&quot;)[Song is Retire - Alvedon]</tw-passagedata></tw-storydata>
+(live: 4s)[(t8n:&quot;dissolve&quot;)[Song is Retire - Alvedon] (stop:)]</tw-passagedata></tw-storydata>
 <script title="Twine engine code" data-main="harlowe">"use strict";var _slicedToArray=function(){return function(e,t){if(Array.isArray(e))return e;if(Symbol.iterator in Object(e))return function(e,t){var n=[],r=!0,a=!1,i=void 0;try{for(var o,s=e[Symbol.iterator]();!(r=(o=s.next()).done)&&(n.push(o.value),!t||n.length!==t);r=!0);}catch(e){a=!0,i=e}finally{try{!r&&s.return&&s.return()}finally{if(a)throw i}}return n}(e,t);throw new TypeError("Invalid attempt to destructure non-iterable instance")}}(),_typeof="function"==typeof Symbol&&"symbol"==typeof Symbol.iterator?function(e){return typeof e}:function(e){return e&&"function"==typeof Symbol&&e.constructor===Symbol&&e!==Symbol.prototype?"symbol":typeof e};function _defineProperty(e,t,n){return t in e?Object.defineProperty(e,t,{value:n,enumerable:!0,configurable:!0,writable:!0}):e[t]=n,e}function _toConsumableArray(e){if(Array.isArray(e)){for(var t=0,n=Array(e.length);t<e.length;t++)n[t]=e[t];return n}return Array.from(e)}!function(){
 /**
  * @license almond 0.3.3 Copyright jQuery Foundation and other contributors.
