@@ -104,11 +104,6 @@ background-size:cover;
 //(align:&quot;=&gt;&lt;=&quot;)[$hint]//
 
 {
-&lt;script&gt;
-var audio = document.createElement(&#39;audio&#39;);
-audio.src =    &#39;https://static.wixstatic.com/mp3/d601cd_74a0fdaafb8e477b954663ddf6cd2074.mp3&#39;;
-audio.loop = true;
-audio.play();&lt;/script&gt;
 (if:$packedCandy is 1)[
 &lt;img id=&quot;candycover&quot; src=&quot;https://static.wixstatic.com/media/d601cd_a0287cf1966d42769b931a40f2fa92b5~mv2.png&quot; usemap=&quot;#ispymap&quot; draggable=&quot;false&quot;&gt;
 ]
@@ -180,7 +175,12 @@ audio.play();&lt;/script&gt;
 
 }</tw-passagedata><tw-passagedata pid="3" name="candy" tags="candy" position="801,298" size="100,100">{(set: $item to &quot;shells&quot;)
 (set: $hint to &quot;I spy a sandy memory.&quot;)
-(enchant:?passage,(text-colour:black)) (enchant:?page,(background:white))}
+(enchant:?passage,(text-colour:black)) (enchant:?page,(background:white))
+&lt;script&gt;
+var audio = document.createElement(&#39;audio&#39;);
+audio.src =    &#39;https://static.wixstatic.com/mp3/d601cd_74a0fdaafb8e477b954663ddf6cd2074.mp3&#39;;
+audio.loop = true;
+audio.play();&lt;/script&gt;}
 
 
 
