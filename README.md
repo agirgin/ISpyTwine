@@ -1,2 +1,2 @@
 # ISpyTwine
-My I Spy Twine Game
+Twine Game for ENCW 3P73 (-:
